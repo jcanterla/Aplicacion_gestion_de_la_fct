@@ -1,0 +1,23 @@
+<tutoresdoc>
+    <tutordoc>
+        <dni>12345678A</dni>
+        <codtut>1</codtut>
+        <nomap>Prudencio Ruiz Lopez</nomap>
+        <correo>pruiz@fundacionsafa.es</correo>
+        <telefono>666777888</telefono>
+    </tutordoc>
+    <tutordoc>
+        <dni>87654321B</dni>
+        <codtut>2</codtut>
+        <nomap>José Ignacio Naranjo</nomap>
+        <correo>jnaranjo@fundacionsafa.es</correo>
+        <telefono>676767676</telefono>
+    </tutordoc>
+    <tutordoc>
+        <dni>98645647C</dni>
+        <codtut>3</codtut>
+        <nomap>Alex Tolon Lopez</nomap>
+        <correo>atolon@fundacionsafa.es</correo>
+        <telefono>686868686</telefono>
+    </tutordoc>
+</tutoresdoc>
