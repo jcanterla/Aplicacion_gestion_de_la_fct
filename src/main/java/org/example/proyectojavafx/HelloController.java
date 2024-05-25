@@ -46,104 +46,30 @@ import javax.swing.*;
 
 public class HelloController {
 
-    @FXML
-    private ImageView alumnos_foto;
 
-    @FXML
-    private Label alumnos_mensaje;
-
-    @FXML
-    private AnchorPane alumnos_panel;
-
-    @FXML
-    private Tab alumnos_tab;
-
-    @FXML
-    private Button asig_boton_confirm;
-
-    @FXML
-    private ChoiceBox<?> asig_combobox_alumno;
-
-    @FXML
-    private ChoiceBox<?> asig_combobox_empresa;
-
-    @FXML
-    private ChoiceBox<?> asig_combobox_tutor;
-
-    @FXML
-    private Label asig_label_alumnos;
-
-    @FXML
-    private Label asig_label_empresa;
-
-    @FXML
-    private Label asig_label_texto_info;
-
-    @FXML
-    private Label asig_label_tutor;
-
-    @FXML
-    private AnchorPane asig_panel;
-
-    @FXML
-    private Tab asig_tab;
-
-    @FXML
-    private TableColumn<?, ?> bbdd_colum_cif;
-
-    @FXML
-    private TableColumn<?, ?> bbdd_colum_cp;
-
-    @FXML
-    private TableColumn<?, ?> bbdd_colum_direcc;
-
-    @FXML
-    private TableColumn<?, ?> bbdd_colum_local;
-
-    @FXML
-    private TableColumn<?, ?> bbdd_colum_mail;
-
-    @FXML
-    private TableColumn<?, ?> bbdd_colum_mod;
-
-    @FXML
-    private TableColumn<?, ?> bbdd_colum_nombre;
-
-    @FXML
-    private TableView<?> empresas_bbdd_tabla;
-
-    @FXML
-    private Button empresas_boton_eliminar;
-
-    @FXML
-    private Button empresas_boton_insertar;
-
-    @FXML
-    private Button empresas_boton_modificar;
-
-    @FXML
-    private Label empresas_label_bbdd;
-
-    @FXML
-    private Label empresas_label_empresa;
-
-    @FXML
-    private Label empresas_label_personas;
-
+    // Elementos de empresa
     @FXML
     private AnchorPane empresas_panel;
 
     @FXML
-    private Pane empresas_panel_bbdd;
+    private Tab empresas_tab;
 
+    @FXML
+    private Label tit_gest_empresas;
+
+    @FXML
+    private TabPane panel_principal;
+
+    @FXML
+    private Label tit_gest_plazas;
+
+
+    // Elementos dentro de empresa de gest de empresa
     @FXML
     private Pane empresas_panel_empresa;
 
     @FXML
-    private Pane empresas_panel_personas;
-
-    @FXML
-    private Tab empresas_tab;
+    private Label empresas_label_empresa;
 
     @FXML
     private ChoiceBox<String> panel_empresa_combobox_jornada;
@@ -199,6 +125,14 @@ public class HelloController {
     @FXML
     private TextField panel_empresa_textfield_nom;
 
+
+    // Elementos dentro de empresa de gest de personas
+    @FXML
+    private Pane empresas_panel_personas;
+
+    @FXML
+    private Label empresas_label_personas;
+
     @FXML
     private Label panel_personas_label_apelaboral;
 
@@ -241,18 +175,69 @@ public class HelloController {
     @FXML
     private TextField panel_personas_textfield_telf;
 
+
+    // Elementos dentro de empresa de los botones
     @FXML
-    private TabPane panel_principal;
+    private Button empresas_boton_eliminar;
+
+    @FXML
+    private Button empresas_boton_insertar;
+
+    @FXML
+    private Button empresas_boton_modificar;
+
+
+    // Elementos dentro de empresa de la tabla de la bbdd
+    @FXML
+    private Pane empresas_panel_bbdd;
+
+    @FXML
+    private TableView<Empresa> empresas_bbdd_tabla;
+
+    @FXML
+    private Label empresas_label_bbdd;
+
+    @FXML
+    private TableColumn<Empresa, Integer> bbdd_colum_cif;
+
+    @FXML
+    private TableColumn<Empresa, String> bbdd_colum_cp;
+
+    @FXML
+    private TableColumn<Empresa, String> bbdd_colum_direcc;
+
+    @FXML
+    private TableColumn<Empresa, Integer> bbdd_colum_local;
+
+    @FXML
+    private TableColumn<Empresa, String> bbdd_colum_mail;
+
+    @FXML
+    private TableColumn<Empresa, String> bbdd_colum_mod;
+
+    @FXML
+    private TableColumn<Empresa, String> bbdd_colum_nombre;
+
+
+    // Elementos alumnos
+    @FXML
+    private ImageView alumnos_foto;
+
+    @FXML
+    private Label alumnos_mensaje;
+
+    @FXML
+    private AnchorPane alumnos_panel;
+
+    @FXML
+    private Tab alumnos_tab;
 
     @FXML
     private Label tit_gest_alumnos;
 
-    @FXML
-    private Label tit_gest_empresas;
 
-    @FXML
-    private Label tit_gest_plazas;
 
+    // Elementos de Tutores
     @FXML
     private Label tit_gest_tutores;
 
@@ -267,6 +252,64 @@ public class HelloController {
 
     @FXML
     private Label tutores_mensaje;
+
+
+
+    // Elementos de Asignación
+    @FXML
+    private Button asig_boton_confirm;
+
+    @FXML
+    private ChoiceBox<String> asig_combobox_alumno;
+
+    @FXML
+    private ChoiceBox<String> asig_combobox_tutor;
+
+    @FXML
+    private Label asig_label_texto_info;
+
+    @FXML
+    private Label asig_label_tutor;
+
+    @FXML
+    private AnchorPane asig_panel;
+
+    @FXML
+    private Tab asig_tab;
+
+    @FXML
+    private ChoiceBox<String> asig_combobox_empresa;
+
+    @FXML
+    private Label asig_label_empresa;
+
+    @FXML
+    private Label asig_label_alumnos;
+
+
+    private boolean alumnos_insertados = false;
+
+    private boolean tutores_insertados = false;
+
+    public Tab getEmpresas_tab() {
+        return empresas_tab;
+    }
+
+    public TabPane getPanel_principal() {
+        return panel_principal;
+    }
+
+    public Tab getAlumnos_tab() {
+        return alumnos_tab;
+    }
+
+    public Tab getTutor_tab() {
+        return tutor_tab;
+    }
+
+    public Tab getAsig_tab() {
+        return asig_tab;
+    }
 
     // En la clase HelloController
     public void initialize() {
@@ -637,7 +680,97 @@ public class HelloController {
 
     @FXML
     void botonModificarEmpresa(ActionEvent event) {
+        // Recoger los datos de los campos de entrada para la empresa
+        int cod_empresa = Integer.parseInt(panel_empresa_textfield_cod.getText());
+        String CIF = panel_empresa_textfield_cif.getText();
+        String nombre = panel_empresa_textfield_nom.getText();
+        String direccion = panel_empresa_textfield_direcc.getText();
+        String cp = panel_empresa_textfield_cp.getText();
+        String localidad = panel_empresa_textfield_local.getText();
+        String jornada = panel_empresa_combobox_jornada.getValue().toString();
+        String modalidad = panel_empresa_combobox_mod.getValue().toString();
+        String email = panel_empresa_textfield_mail.getText();
 
+        Empresa empresaModificada = new Empresa(cod_empresa, nombre, CIF, direccion, cp, localidad, "", jornada, modalidad, email);
+        empresaModificada.actualizarEmpresa();
+
+        // Recoger los datos de los campos de entrada para el tutor laboral
+        String dni_tutor = panel_personas_textfield_laboral.getText();
+        String nombre_tutor = panel_personas_textfield_nomlaboral.getText();
+        String apellidoCompletoTutor = panel_personas_textfield_apelaboral.getText();
+        String[] partesApellidoTutor = apellidoCompletoTutor.split(" ");
+        String apellido1_tutor = partesApellidoTutor[0];
+        String apellido2_tutor = partesApellidoTutor.length > 1 ? partesApellidoTutor[1] : "";
+        String correo_tutor = "";
+        String telefono_tutor = panel_personas_textfield_telf.getText();
+
+        TutorLaboral tutorLaboralModificado = new TutorLaboral(cod_empresa, dni_tutor, nombre_tutor, apellido1_tutor, apellido2_tutor, correo_tutor, telefono_tutor, cod_empresa);
+        tutorLaboralModificado.actualizarTutorLaboral();
+
+        // Recoger los datos de los campos de entrada para el representante legal
+        String dni_repre_legal = panel_personas_textfield_legal.getText();
+        String nombre_repre_legal = panel_personas_textfield_nomlegal.getText();
+        String apellidoCompleto = panel_personas_textfield_apelegal.getText();
+        String[] partesApellido = apellidoCompleto.split(" ");
+        String apellido1_repre_legal = partesApellido[0];
+        String apellido2_repre_legal = partesApellido.length > 1 ? partesApellido[1] : "";
+
+        RepreLegal repreLegalModificado = new RepreLegal(cod_empresa, dni_repre_legal, nombre_repre_legal, apellido1_repre_legal, apellido2_repre_legal, cod_empresa);
+        repreLegalModificado.actualizarRepreLegal();
+
+        // Actualizar la tabla
+        ObservableList<Empresa> listaEmpresas = Empresa.obtenerTodasLasEmpresas();
+        empresas_bbdd_tabla.setItems(listaEmpresas);
+
+        actualizarComboBoxes();
     }
 
+    @FXML
+    public void handleTutorImageClick() {
+        TutorDocente.loadTutorDataFromXML();
+        tutores_mensaje.setVisible(true);
+        actualizarComboBoxes();
+    }
+
+    public void actualizarComboBoxes() {
+        asig_combobox_empresa.setItems(Empresa.obtenerNombresEmpresas());
+        asig_combobox_alumno.setItems(Alumnos.obtenerNombresApellidosAlumnos());
+        asig_combobox_tutor.setItems(TutorDocente.obtenerNombresApellidosTutores());
+    }
+
+    public void insertarAsignacion(String nombreAlumno, String nombreEmpresa, String nombreTutorDocente) {
+        Connection connection = ConexionBaseDeDatos.getConnection();
+        String sql = "INSERT INTO Asignación (FechaAsignación, NombreAlumno, NombreEmpresa, NombreTutorDocente) VALUES (CURDATE(), ?, ?, ?)";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, nombreAlumno);
+            preparedStatement.setString(2, nombreEmpresa);
+            preparedStatement.setString(3, nombreTutorDocente);
+            preparedStatement.executeUpdate();
+
+            // Obtener el nombre del tutor laboral de la empresa seleccionada
+            String nombreTutorLaboral = obtenerNombreTutorLaboral(nombreEmpresa);
+
+            // Modificar el texto del label
+            asig_label_texto_info.setText("El alumno " + nombreAlumno + " queda asignado a la empresa " + nombreEmpresa + " supervisado por el tutor docente " + nombreTutorDocente + " y por el tutor laboral " + nombreTutorLaboral);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String obtenerNombreTutorLaboral(String nombreEmpresa) {
+        String nombreTutorLaboral = "";
+        try (Connection conexion = ConexionBaseDeDatos.getConnection()) {
+            String consulta = "SELECT nombre FROM Tutor_Laboral WHERE cod_empresa = (SELECT cod_empresa FROM Empresa WHERE nombre = ?)";
+            PreparedStatement pstmt = conexion.prepareStatement(consulta);
+            pstmt.setString(1, nombreEmpresa);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                nombreTutorLaboral = rs.getString("nombre");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nombreTutorLaboral;
+    }
 }
