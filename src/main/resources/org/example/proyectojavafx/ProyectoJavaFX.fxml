@@ -182,17 +182,17 @@
       <content>
         <AnchorPane fx:id="alumnos_panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1016.0">
                <children>
-                  <Label fx:id="tit_gest_alumnos" alignment="CENTER" layoutX="155.0" layoutY="31.0" prefHeight="42.0" prefWidth="611.0" style="-fx-border-color: #9DDE8B; -fx-border-radius: 15px; -fx-border-width: 5px; -fx-font-weight: bold;" text="GESTIÓN DE DATOS DE ALUMNOS">
+                  <Label fx:id="tit_gest_alumnos" alignment="CENTER" layoutX="101.0" layoutY="8.0" prefHeight="51.0" prefWidth="428.0" style="-fx-border-color: #9DDE8B; -fx-border-radius: 15px; -fx-border-width: 5px; -fx-font-weight: bold;" text="GESTIÓN DE DATOS DE ALUMNOS">
                      <font>
-                        <Font size="36.0" />
+                        <Font size="24.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="alumnos_foto" fitHeight="251.0" fitWidth="467.0" layoutX="228.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="alumnos_foto" fitHeight="146.0" fitWidth="299.0" layoutX="169.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@DATaTabla.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="alumnos_mensaje" alignment="CENTER" layoutX="168.0" layoutY="397.0" prefHeight="27.0" prefWidth="585.0" style="-fx-background-color: #9DDE8B;" text="Información del fichero ahora registrada en la tabla Alumnos">
+                  <Label fx:id="alumnos_mensaje" alignment="CENTER" layoutX="60.0" layoutY="221.0" prefHeight="30.0" prefWidth="509.0" style="-fx-background-color: #9DDE8B;" text="Información del fichero ahora registrada en la tabla Alumnos">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -204,17 +204,17 @@
          <content>
             <AnchorPane fx:id="tutor_panel" minHeight="0.0" minWidth="0.0" prefHeight="521.0" prefWidth="909.0">
                <children>
-                  <Label fx:id="tit_gest_tutores" alignment="CENTER" layoutX="146.0" layoutY="34.0" prefHeight="55.0" prefWidth="620.0" style="-fx-border-color: #7AB2B2; -fx-border-radius: 15px; -fx-border-width: 5px; -fx-font-weight: bold;" text="GESTIÓN DE DATOS DE TUTORES">
+                  <Label fx:id="tit_gest_tutores" alignment="CENTER" layoutX="84.0" layoutY="7.0" prefHeight="45.0" prefWidth="446.0" style="-fx-border-color: #7AB2B2; -fx-border-radius: 15px; -fx-border-width: 5px; -fx-font-weight: bold;" text="GESTIÓN DE DATOS DE TUTORES">
                      <font>
-                        <Font size="36.0" />
+                        <Font size="24.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="tutores_foto" fitHeight="214.0" fitWidth="432.0" layoutX="242.0" layoutY="167.0" onMouseClicked="#handleTutorImageClick" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="tutores_foto" fitHeight="161.0" fitWidth="329.0" layoutX="146.0" layoutY="70.0" onMouseClicked="#handleTutorImageClick" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@XMLaTabla.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="tutores_mensaje" alignment="CENTER" layoutX="163.0" layoutY="448.0" prefHeight="27.0" prefWidth="585.0" style="-fx-background-color: #7AB2B2;" text="Información del fichero ahora registrada en la tabla Tutores">
+                  <Label fx:id="tutores_mensaje" alignment="CENTER" layoutX="54.0" layoutY="241.0" prefHeight="27.0" prefWidth="507.0" style="-fx-background-color: #7AB2B2;" text="Información del fichero ahora registrada en la tabla Tutores">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -227,33 +227,33 @@
          <content>
             <AnchorPane fx:id="asig_panel" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="tit_gest_plazas" alignment="CENTER" layoutX="148.0" layoutY="32.0" prefHeight="63.0" prefWidth="719.0" style="-fx-border-color: #AD88C6; -fx-border-radius: 15px; -fx-border-width: 5px; -fx-font-weight: bold;" text="GESTIÓN DE LA ASIGNACIÓN DE PLAZAS">
+                  <Label fx:id="tit_gest_plazas" alignment="CENTER" layoutX="47.0" layoutY="9.0" prefHeight="50.0" prefWidth="479.0" style="-fx-border-color: #AD88C6; -fx-border-radius: 15px; -fx-border-width: 5px; -fx-font-weight: bold;" text="GESTIÓN DE LA ASIGNACIÓN DE PLAZAS">
                      <font>
-                        <Font size="36.0" />
+                        <Font size="24.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="asig_combobox_alumno" layoutX="565.0" layoutY="167.0" prefHeight="33.0" prefWidth="198.0" />
-                  <ChoiceBox fx:id="asig_combobox_empresa" layoutX="565.0" layoutY="221.0" prefHeight="33.0" prefWidth="198.0" />
-                  <ChoiceBox fx:id="asig_combobox_tutor" layoutX="565.0" layoutY="276.0" prefHeight="33.0" prefWidth="198.0" />
-                  <Button fx:id="asig_boton_confirm" layoutX="394.0" layoutY="341.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="226.0" text="Confirmar">
+                  <ChoiceBox fx:id="asig_combobox_alumno" layoutX="295.0" layoutY="68.0" prefHeight="6.0" prefWidth="198.0" />
+                  <ChoiceBox fx:id="asig_combobox_empresa" layoutX="295.0" layoutY="101.0" prefHeight="1.0" prefWidth="198.0" />
+                  <ChoiceBox fx:id="asig_combobox_tutor" layoutX="295.0" layoutY="131.0" prefHeight="0.0" prefWidth="198.0" />
+                  <Button fx:id="asig_boton_confirm" layoutX="173.0" layoutY="165.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="226.0" text="Confirmar">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="14.0" />
                      </font>
                   </Button>
-                  <Label fx:id="asig_label_texto_info" alignment="CENTER" layoutX="287.0" layoutY="408.0" prefHeight="89.0" prefWidth="475.0" text="Texto" />
-                  <Label fx:id="asig_label_alumnos" alignment="CENTER_RIGHT" layoutX="251.0" layoutY="166.0" prefHeight="36.0" prefWidth="214.0" text="Elección de Alumno:">
+                  <Label fx:id="asig_label_texto_info" alignment="CENTER" layoutX="48.0" layoutY="180.0" prefHeight="89.0" prefWidth="475.0" text="Texto" />
+                  <Label fx:id="asig_label_alumnos" alignment="CENTER_RIGHT" layoutX="102.0" layoutY="71.0" prefHeight="0.0" prefWidth="166.0" text="Elección de Alumno:">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="asig_label_empresa" alignment="CENTER_RIGHT" layoutX="251.0" layoutY="221.0" prefHeight="36.0" prefWidth="214.0" text="Elección de Empresa:">
+                  <Label fx:id="asig_label_empresa" alignment="CENTER_RIGHT" layoutX="53.0" layoutY="104.0" prefHeight="1.0" prefWidth="214.0" text="Elección de Empresa:">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="asig_label_tutor" alignment="CENTER_RIGHT" layoutX="227.0" layoutY="275.0" prefHeight="36.0" prefWidth="214.0" text="Elección de Tutor:">
+                  <Label fx:id="asig_label_tutor" alignment="CENTER_RIGHT" layoutX="53.0" layoutY="134.0" prefHeight="0.0" prefWidth="214.0" text="Elección de Tutor:">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
                </children>

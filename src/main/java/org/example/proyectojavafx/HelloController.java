@@ -17,6 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 
@@ -400,6 +401,8 @@ public class HelloController {
             }
         });
 
+        cambio_tamaño();
+
 
         Image imagen_tutores = new Image(getClass().getResourceAsStream("/org/example/proyectojavafx/XMLaTabla.png"));
         tutores_foto.setImage(imagen_tutores);
@@ -772,5 +775,27 @@ public class HelloController {
             e.printStackTrace();
         }
         return nombreTutorLaboral;
+    }
+
+    public void cambio_tamaño() {
+        //cambiar el tamaño del panel
+        panel_principal.getSelectionModel().selectedItemProperty().addListener((obs, oldTab, newTab) -> {
+            Stage stage = (Stage) panel_principal.getScene().getWindow();
+
+            if (newTab.getText().equals("Empresas")) {
+                stage.setWidth(1015);
+                stage.setHeight(680);
+            } else if (newTab.getText().equals("Alumnos")) {
+                stage.setWidth(620);
+                stage.setHeight(340);
+            } else if (newTab.getText().equals("Tutores")) {
+                stage.setWidth(620);
+                stage.setHeight(340);
+            } else if (newTab.getText().equals("Asignación")) {
+                stage.setWidth(620);
+                stage.setHeight(340);
+            }
+            newTab = null;
+        });
     }
 }
